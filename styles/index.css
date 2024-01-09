@@ -7,10 +7,12 @@
 @layer base {
   body {
     font-family: "Inter", sans-serif;
-  }
+    cursor: none;
+  } 
 }
 
 @layer components {
+  cursor: none;
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
   }
@@ -30,4 +32,17 @@
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
   }
+  .custom-cursor {
+    position: fixed;
+    width: 30px; /* Adjust size based on your image */
+    height: 30px;
+    background-image: url('/images/logo-small.png'); /* Update with your image path */
+    background-size: cover;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    z-index: 99999999; /* Ensure it appears above other elements */
+  }
+  input {
+    cursor: none; /* Disable default cursor for input elements */
+  }
 }
+

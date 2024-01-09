@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import CursorComponent from "@/components/CursorComponent";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
@@ -14,6 +15,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html suppressHydrationWarning lang="en">
       {/*
@@ -23,12 +25,14 @@ export default function RootLayout({
       <head />
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <div className="custom-cursor" /> {/* Render the custom cursor div */}
         <Providers>
           <Header />
           {children}
           <Footer />
           <ScrollToTop />
         </Providers>
+        <CursorComponent/>
       </body>
     </html>
   );
