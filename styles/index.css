@@ -34,15 +34,15 @@
   }
   .custom-cursor {
     position: fixed;
-    width: 30px; /* Adjust size based on your image */
+    width: 30px; 
     height: 30px;
-    background-image: url('/images/logo-small.png'); /* Update with your image path */
+    background-image: url('/images/logo-small.png');
     background-size: cover;
-    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
-    z-index: 99999999; /* Ensure it appears above other elements */
+    pointer-events: none; 
+    z-index: 99999999; 
   }
   input {
-    cursor: none; /* Disable default cursor for input elements */
+    cursor: none;
   }
 }
 
