@@ -14,7 +14,20 @@ const Video = () => {
       <div className="container">
         <SectionTitle
           title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="At our company, we are passionate about
+          helping businesses grow and innovate
+          through the power of digital solutions. Every
+          business deserves access to cutting-edge
+          technology that can streamline processes,
+          increase efficiency, and drive growth.Our
+          team of experienced developers and
+          designers are committed to creating
+          bespoke digital solutions. We work closely
+          with businesses to identify pain points and
+          areas for improvement and then use our
+          expertise to develop custom software
+          solutions that can help overcome these
+          challenges."
           center
           mb="80px"
         />
