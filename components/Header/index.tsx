@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-
+import {motion, useScroll} from 'framer-motion';
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -37,16 +37,19 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
+  const { scrollYProgress } = useScroll();
   return (
     <>
+  
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header left-0 top-0 z-40 flex flex-col w-full justify-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-transparent"
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+          : "absolute bg-transparent"
         }`}
-      >
+      >        
+        <motion.div style={{scaleX : scrollYProgress}} className="h-1 bg-primary" > 
+        </motion.div>
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
