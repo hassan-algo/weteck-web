@@ -52,31 +52,33 @@ const Header = () => {
         </motion.div>
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
-                <Image
-                  src="/images/logo/logo-black.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
-              </Link>
+            <div className="w-4/12">
+              <div className="w-60 max-w-full px-4 xl:mr-12">
+                <Link
+                  href="/"
+                  className={`header-logo block w-full ${
+                    sticky ? "py-5 lg:py-2" : "py-8"
+                  } `}
+                >
+                  <Image
+                    src="/images/logo/logo-black.png"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className="w-full dark:hidden"
+                  />
+                  <Image
+                    src="/images/logo/logo.svg"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className="hidden w-full dark:block"
+                  />
+                </Link>
+              </div>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
-              <div>
+            
+              <div className="w-8/12 text-center">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -107,7 +109,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-12 justify-center">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
@@ -161,12 +163,12 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex items-center justify-end pr-16 lg:pr-0 w-4/12">
                 <div>
                   <ThemeToggler />
                 </div>
               </div>
-            </div>
+            
           </div>
         </div>
       </header>
